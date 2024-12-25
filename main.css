@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .custom-bg {
+      background-color: #00ffe6;
+      background-image: 
+        linear-gradient(135deg, #ffffff 1px, transparent 1px),
+        linear-gradient(225deg, #ffffff 1px, transparent 1px),
+        linear-gradient(45deg, #ff0000 1px, transparent 1px),
+        linear-gradient(315deg, #0000ff 1px, transparent 1px);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px, 0 0, 15px 15px;
+    }
+  }
+  
+  body {
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Container */
+  .container {
+    @apply w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg;
+  }
+  
+  h1 {
+    @apply text-3xl font-bold text-center text-gray-700;
+  }
+  
+  .counter {
+    @apply text-center text-lg mt-4 mb-6 text-gray-600;
+  }
+  
+  /* Input Section */
+  .task-input {
+    @apply flex justify-between items-center mb-6;
+  }
+  
+  .task-input input {
+    @apply p-2 border border-gray-300 rounded-md w-full;
+  }
+  
+  .task-input button {
+    @apply ml-4 p-2 bg-teal-500 text-white rounded-md hover:bg-teal-400 focus:outline-none;
+  }
+  
+  /* Table Styles */
+  table {
+    @apply w-full table-auto border-collapse;
+  }
+  
+  th, td {
+    @apply px-4 py-2 border-b text-left;
+  }
+  
+  th {
+    @apply text-left;
+  }
+  
+  .status {
+    @apply cursor-pointer text-green-500;
+  }
+  
+  .delete {
+    @apply cursor-pointer text-red-500;
+  }
+  
+  button:hover {
+    @apply bg-teal-400;
+  }
+  
+  /* Custom Class for Task Row */
+  .custom-task-row {
+    @apply flex items-center justify-between;
+  }
+  
+  .custom-task-row .status {
+    @apply cursor-pointer text-green-500;
+  }
+  
