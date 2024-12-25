@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-blue-50 flex justify-center items-center min-h-screen custom-bg">
+    <div class="container bg-white shadow-lg rounded-lg p-6 w-full max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-gray-700">To-do List</h1>
+
+        <!-- Task counter -->
+        <div class="counter text-center text-lg mt-4 mb-6 text-gray-600">
+            0 Total, 0 Completed, 0 Pending
+        </div>
+
+        <!-- Input for adding tasks -->
+        <div class="task-input flex justify-between items-center mb-6">
+            <input type="text" id="task" class="p-2 border border-gray-300 rounded-md w-full" placeholder="Add your task ...">
+            <button onclick="addTask()" class="ml-4 p-2 bg-teal-500 text-white rounded-md hover:bg-teal-400 focus:outline-none">Add</button>
+        </div>
+
+        <!-- Task list table -->
+        <table class="w-full table-auto border-collapse">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2 border-b text-left">Num</th>
+                    <th class="px-4 py-2 border-b text-left">Task</th>
+                    <th class="px-4 py-2 border-b text-left">Date</th>
+                    <th class="px-4 py-2 border-b text-left">Status</th>
+                    <th class="px-4 py-2 border-b text-left">Delete</th>
+                    <th class="px-4 py-2 border-b text-left">Edit</th>
+                </tr>
+            </thead>
+            <tbody id="task-list">
+                <!-- Task rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Include JavaScript file -->
+    <script src="index.js"></script>
+</body>
+</html>
