@@ -81,4 +81,5 @@
   .custom-task-row .status {
     @apply cursor-pointer text-green-500;
   }
-  
+  .edit {
+    cursor: pointer;}
